@@ -10,4 +10,5 @@ After each trial, we obtain an $\overline{X}$ and from the simulation as we incr
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\overline{X}_n \to \mu \quad\textrm{as}\ n \to \infty \ \textrm{where, } \overline{X}_n=\left(\frac{1}{n}\right)\sum X_i$
 
 ## Example 
+<img width="1438" alt="Screen Shot 2022-12-26 at 11 11 21 PM" src="https://user-images.githubusercontent.com/29878743/209609823-eb10fbae-d00a-436c-a71d-f0a7d6f8a752.png">
 
