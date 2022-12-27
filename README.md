@@ -6,5 +6,5 @@ I developed this project to play around with the famous Statistics Law of Large 
 
 ## Principal 
 After each trial, we obtain an $\overline{X}$ and from the simulation, as we increase the number of trials, that sample mean ( $\overline{X}$ ) converges closer and closer to the theoretitcal mean ( $\mu$ ). Thus, <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\overline{X}_n \to \mu \quad\textrm{as}\ n \to \infty \ \textrm{where, } \ \overline{X}_n=\frac1n(X_1+\cdots+X_n)$
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\overline{X}_n \to \mu \quad\textrm{as}\ n \to \infty \ \textrm{where, } \ \overline{X}_n=\frac1n(X_1+\cdots+X_n)$
 
