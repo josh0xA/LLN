@@ -18,3 +18,5 @@ After each trial, we obtain an $\overline{X}$ and from the simulation as we incr
 ### Graph Visual (p=0.5, n=1000)
 <img width="988" alt="Screen Shot 2022-12-26 at 11 14 10 PM" src="https://user-images.githubusercontent.com/29878743/209610056-17e910c8-c59a-417b-804b-bd54b9615f74.png">
 
+## License 
+MIT Licence. Copyright (c) 2023 Josh Schiavone
