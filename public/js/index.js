@@ -11,6 +11,7 @@ var chart;
 let probs = []
 let graph_probs = []
 let iteration_trials = [] 
+let theoretical_line = []
 
 function randomNumber(min, max) { 
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -21,6 +22,7 @@ function simulate_lln() {
         probs = []
         graph_probs = []
         iteration_trials = []
+        theoretical_line = []
         chart.destroy()
       }
 
@@ -78,7 +80,8 @@ function simulate_lln() {
         graph_probs.push(simulated_prob)
         iter++;
     }            
-    draw_graph()       
+    fill_theoretical_line()
+    draw_graph()
     clearFields()
 
     var table = document.getElementById("stats1");
@@ -90,7 +93,7 @@ function simulate_lln() {
     cell1.innerHTML = trials;
     cell2.innerHTML = getClosest(probs, (prob_numerator / prob_denominator * 100)) + "%";
     cell3.innerHTML = (prob_numerator / prob_denominator * 100).toFixed(2) + "%";
-    document.getElementById("summary").style.fontWeight = "bold";
+    // make "Summary" bold 
     summary.innerHTML = "Summary: " + success_counter + "/" + trials + " successes/trials. x\u0304 =  " + 
         (success_counter / (success_counter + other_counter) * 100).toFixed(7) + "%"
 }
@@ -106,17 +109,37 @@ function getClosest(arr, closestTo) {
     return closest;
 }
 
+function fill_theoretical_line() {
+    var prob_numerator = document.getElementById("numerator").value;
+    var prob_denominator = document.getElementById("denominator").value;
+    var theoretical_prob = (prob_numerator / prob_denominator * 100);
+
+    for (var i = 0; i < iteration_trials.length; i++) {
+        theoretical_line.push(theoretical_prob);
+    }
+}
+
 function draw_graph() {
+    var numerator = document.getElementById("numerator").value;
+    var denominator = document.getElementById("denominator").value;
+    var theoretical_prob = (numerator / denominator * 100).toFixed(2);
+
     chart = new Chart(document.getElementById("myChart"), {
     type: 'line',
     data: {
         labels: iteration_trials,
         datasets: [{ 
             data: graph_probs,
-            label: "Simulated Probability " + document.getElementById("numerator").value + "/" + document.getElementById("denominator").value,
+            label: "Simulated Probability " + numerator+ "/" + denominator,
             // set border color to hot pink
             borderColor: "rgb(255, 105, 180)",
             fill: false,
+            pointRadius: 1
+        }, {
+            data: theoretical_line,
+            label: "Theoretical Probability " + theoretical_prob + "%",
+            borderColor: "rgb(0, 191, 255)",
+            fill: true,
             pointRadius: 1
         }]
     },
@@ -134,17 +157,6 @@ function draw_graph() {
                 ticks: {
                     autoSkip: true, 
                     autoSkipPadding: 10, 
-                    // callback: function(val, index) {
-                    //     if (iteration_trials.length < 50) {
-                    //         return index % 1 === 0 ? val : '';
-                    //     } else if (iteration_trials.length >= 50 && iteration_trials.length <= 100) {
-                    //         return index % 3 === 0 ? val : '';
-                    //     } else if (iteration_trials.length >= 101 && iteration_trials.length <= 1000) {
-                    //         return index % 10 === 0 ? val : '';
-                    //     } else {
-                    //         return index % 100 === 0 ? val : '';
-                    //     }
-                    // },
                 }
             }],
             yAxes: [{
@@ -166,8 +178,7 @@ function draw_graph() {
             line: {
                 borderWidth: 1
             }
-        }
-        
+        },      
     }
     });
 }
