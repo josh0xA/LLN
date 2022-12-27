@@ -1,4 +1,4 @@
-# LLN
+# Simulate The Law of Large Numbers The LLN WebApp
 Law of Large Numbers Simulator by Josh Schiavone
 
 ## Purpose and What Is? 
