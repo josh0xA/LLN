@@ -1,5 +1,5 @@
 # Simulate The Law of Large Numbers The LLN WebApp
-Law of Large Numbers Simulator by Josh Schiavone
+Law of Large Numbers Simulator by Josh Schiavone <br/>
 Try it here: https://josh0xa.github.io/LLN/
 
 ## Purpose and What Is? 
