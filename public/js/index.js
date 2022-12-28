@@ -130,7 +130,7 @@ function draw_graph() {
         labels: iteration_trials,
         datasets: [{ 
             data: graph_probs,
-            label: "Simulated Probability " + numerator+ "/" + denominator,
+            label: "Simulated Probability",
             // set border color to hot pink
             borderColor: "rgb(255, 105, 180)",
             fill: false,
