@@ -94,6 +94,7 @@ function simulate_lln() {
     cell2.innerHTML = getClosest(probs, (prob_numerator / prob_denominator * 100)) + "%";
     cell3.innerHTML = (prob_numerator / prob_denominator * 100).toFixed(2) + "%";
     // make "Summary" bold 
+    document.getElementById("summary").style.fontWeight = "bold";
     summary.innerHTML = "Summary: " + success_counter + "/" + trials + " successes/trials. x\u0304 =  " + 
         (success_counter / (success_counter + other_counter) * 100).toFixed(7) + "%"
 }
